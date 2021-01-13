@@ -6,4 +6,8 @@ class Thermostat {
     this.temperature = 20
   };
 
+  increase() {
+    this.temperature++
+  };
+
 }
