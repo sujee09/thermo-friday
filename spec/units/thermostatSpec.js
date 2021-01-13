@@ -54,4 +54,22 @@ describe('thermostat', function(){
     expect(thermostat.temperature).toEqual(20)
   });
 
+  it('shows low-usage energy when temperature is < 18', function(){
+    [1,2,3].forEach(function(){
+      thermostat.decrease();
+    });
+     expect(thermostat.energyUsage()).toEqual('low-usage')
+   });
+
+   it('shows medium-usage energy when temperature is <= 25', function(){
+     expect(thermostat.energyUsage()).toEqual('medium-usage')
+   });
+
+   it('shows high-usage energy when temperature is > 25', function(){
+    thermostat.powerSaving();
+    [1,2,3,4,5,6].forEach(function(){
+      thermostat.increase();
+    });
+     expect(thermostat.energyUsage()).toEqual('high-usage')
+   });
 });

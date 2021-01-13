@@ -41,4 +41,5 @@ describe('Feature Test', function(){
      expect(function(){ thermostat.increase(); }).toThrowError('Cannot increase temperature above 32');
      expect(thermostat.temperature).toEqual(32)
   });
+
 });
