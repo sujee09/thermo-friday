@@ -46,4 +46,12 @@ describe('thermostat', function(){
     expect(thermostat._powerSavingMode).toEqual(true)
   });
 
+  it('can reset temperature to 20', function(){
+    [1,2,3,4,5].forEach(function(){
+      thermostat.increase();
+    });
+    thermostat.reset();
+    expect(thermostat.temperature).toEqual(20)
+  });
+
 });
