@@ -7,6 +7,10 @@ class Thermostat {
     this._powerSavingMode = true;
   };
 
+  showTemperature() {
+    return this.temperature
+  }
+
   increase() {
     if(this.temperature === 25 && this._powerSavingMode === true) {
       throw new Error('Power Saving Mode: cannot increase temperature above 25'); 

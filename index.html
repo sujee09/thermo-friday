@@ -1,18 +1,24 @@
 <html lang="en">
   <script src="src/thermostat.js"></script>
 <head>
+  <script src="jquery.js"></script>
+  <script src="interface.js"></script>
+  <style>
+    a.test {
+    font-weight: bold;
+    }
+  </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thermostat</title>
 </head>
 <body>
-  <h1>Temperature:</h1>
-    <form action="">
-        <input type="button" value="Increase" />
-        <input type="button" value="Decrease" />
-        <input type="button" value="Reset" />
-        <input type="button" value="Power Saving Mode" /><br><br>
+  <title>Temperature:</title>
+  <h1 id="temperature"></h1>
+      <p><button id="temperature-up">+</button></p>
+      <button id="temperature-down">-</button>
+      <button id="temperature-reset">reset</button>
+      <button id="power-saving-mode">power-saving-mode</button><br><br>
         Power saving mode is: <span id="power-saving-status">on</span>
-    </form>
 </body>
 </html>
